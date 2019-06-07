@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica;
+    padding: 10px;
+    background-color: lavender;
+}
+
+/* Header Title and Logo */
+header {
+    padding: 30px;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+header h1 {
+    font-size: 40px;
+    font-family: Palatino Linotype;
+    
+}
+
+header h1 a {
+    text-decoration: none;
+    color: rebeccapurple;
+}
+
+/* Nav Bar */
+nav {
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline;
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* Style nav buttons */
+nav ul li a {
+    float: left;
+    text-align: center;
+    margin-right: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: rebeccapurple;
+    background-color: aliceblue;
+}
+
+/* Change color on hover */
+nav a:hover {
+    background-color: aliceblue;
+    color: mediumpurple;
+}
+nav a.active {
+    background-color: rebeccapurple;
+    color: aliceblue;
+}
+
+#exit-button {
+    float: right;
+    margin-right: 0;
+    background-color: orangered;
+    color: bisque;
+}
+
+/* Columns */
+.leftcol {
+    width: 70%;
+    float: left;
+}
+
+.rightcol {
+    width: 30%;
+    float: left;
+    background-color: lavender;
+    padding-left: 20px;  
+}
+
+.leftcol.half {
+    width: 49%
+}
+
+.rightcol.half {
+    width: 51%
+
+}
+
+.twothird{
+     width: 67%;
+  
+}
+    
+.third {
+    width: 33%;
+}
+
+
+/*General page content */
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    font-family: monospace;
+    text-shadow: 4px 5px lavender;
+    color: rebeccapurple;
+}
+
+h3 {
+    font-family: Arial;
+    font-size: 22px;
+    color: darkslateblue;
+}
+
+p {
+    font-size: 18px;
+    color: darkslateblue;
+}
+
+img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+footer {
+    padding: 20px;
+    text-align: right;
+    background-color: rebeccapurple;
+    bottom: 0;
+    margin-top: auto;
+}
+
+footer p {
+    color: lavender;
+    font-size: 14px;
+    margin: 0;
+    margin-right: 20px;
+}
+
+/* Responsive layout - stack cols*/
+@media screen and (max-width: 1000px) {
+    .rightcol.half, .leftcol.half {   
+        width: 100%;
+        padding: 0;
+    }
+    .leftcol, .rightcol {   
+        width: 50%;
+        padding: 20;
+    }
+}
+@media screen and (max-width: 800px) {
+  .leftcol, .rightcol {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - stack links */
+@media screen and (max-width: 500px) {
+  nav ul li {
+        display: block;
+        float: none;
+
+    }
+    nav ul li a {
+        width: 100%;
+    }
+}
+
+.team-img {
+    width: 100%;
+}
+
+.meet {
+    font-size: 130px;
+    font: monospace;
+    text-shadow: 4px 5px #AFCBFF;
+    color: orangered;
+
+}
+
+/* Slideshow*/
+
+/* Slideshow container */
+.slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.slide {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.slide-text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.slide-num {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
